@@ -1,0 +1,37 @@
+baseURL = "https://piestyx.dev/"
+languageCode = "en-us"
+title = "piestyx.dev"
+theme = "PaperMod"
+
+[pagination]
+  pagerSize = 10
+defaultContentLanguage = "en"
+enableRobotsTXT = true
+
+[params]
+  author = "piestyx"
+  description = "devlog, experiments, and quiet progress"
+  defaultTheme = "dark"
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowBreadCrumbs = false
+  ShowPostNavLinks = true
+  hideFooter = false
+  displayFullLangName = false
+  disableScrollToTop = false
+
+[menu]
+  [[menu.main]]
+    name = "Devlog"
+    url = "/devlog/"
+    weight = 1
+
+  [[menu.main]]
+    name = "Blog"
+    url = "/blog/"
+    weight = 2
+
+  [[menu.main]]
+    name = "Lore"
+    url = "/lore/"
+    weight = 3

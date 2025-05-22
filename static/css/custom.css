@@ -1,0 +1,159 @@
+/* === General Tone: Lain + Industrial Core === */
+:root {
+  --theme: #0d0d0d;
+  --entry: #1a1a1a;
+  --primary: #00ffe0;
+  --secondary: #7f7f7f;
+  --tertiary: #3a3a3a;
+
+  --text-color: #e0e0e0;
+  --link-color: #00ffe0;
+  --code-bg: #141414;
+  --border: #333;
+
+  --industrial-glow: #0ff8e0;
+  --metal-gradient: linear-gradient(to bottom, #1a1a1a 0%, #0f0f0f 100%);
+}
+
+/* === Base Font + Vibe === */
+body {
+  font-family: 'IBM Plex Mono', monospace;
+  letter-spacing: 0.01em;
+  background-color: #121212;
+  background-image: radial-gradient(ellipse at bottom, #121212 0%, #0a0a0a 100%);
+  color: var(--text-color);
+}
+
+/* === Link Styling: Glitch Glow === */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  position: relative;
+}
+
+a:hover {
+  text-shadow: 0 0 4px var(--link-color), 0 0 6px #007f7f;
+  transition: text-shadow 0.3s ease-in-out;
+}
+
+/* === Headings: Digital Industrial === */
+h1, h2, h3 {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--primary);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+/* === Containers: Framing + Contrast === */
+.content {
+  border-left: 2px solid var(--border);
+  padding-left: 2rem;
+  margin-top: 2rem;
+  background: var(--entry);
+  box-shadow: inset 0 0 10px #111;
+}
+
+/* === Industrial Divider === */
+hr {
+  border: none;
+  height: 1px;
+  background: var(--border);
+  margin: 2rem 0;
+}
+
+/* === Code Blocks === */
+pre, code {
+  background-color: var(--code-bg);
+  color: #f8f8f2;
+  font-size: 0.95em;
+  padding: 0.4em 0.6em;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+/* === Subtle Panel Shadow for Sections === */
+section {
+  box-shadow: 0 0 6px rgba(0, 255, 224, 0.1);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.5rem;
+  background: var(--metal-gradient);
+  margin-bottom: 2rem;
+}
+
+/* === Optional: Glowing Panel Header === */
+section h2 {
+  text-shadow: 0 0 3px var(--industrial-glow);
+}
+
+/* === CRT SCANLINE EFFECT === */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Scanlines */
+body::before {
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.03) 0px,
+    rgba(255, 255, 255, 0.03) 1px,
+    rgba(0, 0, 0, 0.05) 2px,
+    rgba(0, 0, 0, 0.05) 3px
+  );
+  mix-blend-mode: overlay;
+  opacity: 0.4;
+}
+
+/* Flicker effect */
+body::after {
+  background: rgba(255, 255, 255, 0.03);
+  animation: flicker 0.25s infinite;
+  opacity: 0.07;
+}
+
+@keyframes flicker {
+  0%, 100% {
+    opacity: 0.03;
+  }
+  50% {
+    opacity: 0.09;
+  }
+}
+
+/* === Animated Noise Overlay === */
+body::after {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200vh;
+  background: url("https://assets.iceable.com/img/noise-transparent.png") repeat;
+  animation: bg-animation 0.2s infinite;
+  opacity: 0.9;
+}
+
+@keyframes bg-animation {
+  0% { transform: translate(0,0); }
+  10% { transform: translate(-5%,-5%); }
+  20% { transform: translate(-10%,5%); }
+  30% { transform: translate(5%,-10%); }
+  40% { transform: translate(-5%,15%); }
+  50% { transform: translate(-10%,5%); }
+  60% { transform: translate(15%,0); }
+  70% { transform: translate(0,10%); }
+  80% { transform: translate(-15%,0); }
+  90% { transform: translate(10%,5%); }
+  100% { transform: translate(5%,0); }
+}
