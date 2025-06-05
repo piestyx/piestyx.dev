@@ -1,7 +1,7 @@
 baseURL = "https://piestyx.dev/"
 languageCode = "en-us"
 title = "piestyx.dev"
-theme = "PaperMod"
+theme = ["PaperMod", "github-style", "coming-soon"]
 
 [pagination]
   pagerSize = 10
@@ -10,7 +10,7 @@ enableRobotsTXT = true
 
 [params]
   author = "piestyx"
-  description = "devlog, experiments, and quiet progress"
+  description = "devlog, experiments, and some progress"
   defaultTheme = "dark"
   ShowReadingTime = true
   ShowShareButtons = false
@@ -20,10 +20,13 @@ enableRobotsTXT = true
   displayFullLangName = false
   disableScrollToTop = false
 
+[taxonomies]
+  tag = "tags"
+
 [menu]
   [[menu.main]]
-    name = "Devlog"
-    url = "/devlog/"
+    name = "Packages"
+    url = "/packages/"
     weight = 1
 
   [[menu.main]]
@@ -32,6 +35,6 @@ enableRobotsTXT = true
     weight = 2
 
   [[menu.main]]
-    name = "Lore"
-    url = "/lore/"
+    name = "ECHO"
+    url = "/echo/"
     weight = 3
