@@ -1,9 +1,8 @@
 ---
-title: "Welcome"
-url: "/"
-layout: "single"
+title: Welcome
+url: /
+layout: single
 ---
-
 # Hi, I'm piestyx
 
 I'm building dev tools, AI pipelines, entertainment infrastructure, and learning to dance with ROCm-powered systems.

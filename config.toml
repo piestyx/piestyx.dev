@@ -38,3 +38,6 @@ enableRobotsTXT = true
     name = "ECHO"
     url = "/echo/"
     weight = 3
+
+[markup.goldmark.renderer]
+unsafe = true

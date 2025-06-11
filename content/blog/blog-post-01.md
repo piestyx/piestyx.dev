@@ -1,10 +1,13 @@
 ---
-title: "Doing it with vibes"
-url: "/blog/vibes-01"
-layout: "single"
-tags: ["#blog"]
+title: Doing it with vibes
+url: /blog/vibes-01
+layout: single
+tags:
+  - "#blog"
+  - "#vibes"
+date: 2025-05-30
 ---
-# I'm piestyx, and I'm a vibe-coder
+## I'm piestyx, and I'm a vibe-coder
 
 I wasn't too sure how open to be about being a dirty vibe-coder but I think it might have got a bit of a bad rep because of misplaced expectations, let me chuck my story into the ring. 
 
