@@ -19,7 +19,7 @@ The same applies to AI. When there is an LLM that is cloud-based and embedded in
 
 ## When the Hammer Reflects
 
-An AI isn't like a hammer in the same way that a paintbrush is like a hammer. That probably sounds a bit off, how is a paintbrush like a hammer? They are both tools that can be **Zuhandensein** and **Vorhandensein**. They exist as _dasein_, by they can never be _Dasein_.
+An AI isn't like a hammer in the same way that a paintbrush is like a hammer. That probably sounds a bit off, how is a paintbrush like a hammer? They are both tools that can be **Zuhandensein** and **Vorhandensein**. They exist as _dasein_, but they can never be _Dasein_.
 
 Hang up the straitjacket for just a moment longer, please. I know I just said that they are both dasein but they will never be Dasein and that is basically the same thing isn't it? Welcome to philosophy …
 
