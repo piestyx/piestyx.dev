@@ -1,6 +1,6 @@
 ---
 title: AI, Heidegger, and Ontological Ambiguity
-url: /blog/blog-04
+url: /blog/blog-02
 layout: single
 tags:
   - "#blog"

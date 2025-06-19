@@ -1,6 +1,6 @@
 ---
 title: The Basilisk Stirs...
-url: /blog/blog-02
+url: /blog/blog-01
 layout: single
 tags:
   - "#blog"
