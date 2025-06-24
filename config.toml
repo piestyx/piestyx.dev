@@ -1,7 +1,7 @@
 baseURL = "https://piestyx.dev/"
 languageCode = "en-us"
 title = "piestyx.dev"
-theme = ["PaperMod", "github-style", "coming-soon"]
+theme = ["PaperMod", "github-style"]
 
 [pagination]
   pagerSize = 10
@@ -36,7 +36,7 @@ enableRobotsTXT = true
 
   [[menu.main]]
     name = "ECHO"
-    url = "/echo/"
+    url = "/project_echo/"
     weight = 3
 
 [markup.goldmark.renderer]

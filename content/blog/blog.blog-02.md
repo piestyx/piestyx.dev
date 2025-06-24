@@ -4,12 +4,14 @@ url: /blog/blog-02
 layout: single
 tags:
   - "#blog"
-  - philosophy
+  - "#philosophy"
 date: 2025-06-11
+summary: >
+  A raven is like a writing desk, and a hammer is like a paintbrush. Some thoughts on AI with a Heideggerian lens…
 ---
-**Bear with me on this one, we're talking Philosophy and that means there is some German in there**
-
 ## AI as a Tool
+
+**Bear with me on this one, we're talking Philosophy and that means there is some German in there**  
 
 When we think of tools we are generally considering them from a specific pragmatic paradigm; **they are artifacts made for use**. Considering from a Heideggerian perspective we can say they have a role or _Zweck_, and they serve within the _context of readiness-to-hand_ or, **Zuhandensein**. If we consider AI as a tool like a hammer, then we stay within that specific pragmatic paradigm and it takes on those aforementioned states of being.
 

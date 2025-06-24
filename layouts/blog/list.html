@@ -1,0 +1,67 @@
+{{ define "main" }}
+<div class="blog-index-layout">
+
+  <!-- Sidebar with Tags -->
+  <aside class="blog-tags">
+    <h3>Tags</h3>
+    <ul>
+      {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+        <li><a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a></li>
+      {{ end }}
+    </ul>
+  </aside>
+
+  <!-- Main Blog Post List -->
+  <section class="blog-posts">
+    <h1>All Blog Posts</h1>
+    {{ range .Pages.ByDate.Reverse }}
+      {{ $post := . }}
+      <article class="blog-list-item">
+        <h2><a href="{{ $post.RelPermalink }}">{{ $post.Title }}</a></h2>
+        <p>{{ .Summary }}</p>
+        <small>
+        {{ $post.Date.Format "January 2, 2006" }} —
+        {{ $post.WordCount }} words —
+        Tags:
+        {{ range $index, $tag := $post.Params.tags }}
+            <a href="{{ "/tags/" | relLangURL }}{{ $tag | urlize }}">{{ $tag }}</a>{{ if lt (add $index 1) (len $post.Params.tags) }}, {{ end }}
+        {{ end }}
+        </small>
+      </article>
+    {{ end }}
+  </section>
+
+</div>
+
+<style>
+.blog-index-layout {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+.blog-tags {
+  flex: 1;
+  border-right: 1px solid #ddd;
+  padding-right: 1rem;
+}
+.blog-tags ul {
+  list-style-type: none;
+  padding: 0;
+}
+.blog-tags li {
+  margin: 0.5rem 0;
+}
+.blog-posts {
+  flex: 3;
+}
+.blog-list-item {
+  margin-bottom: 2rem;
+}
+.blog-list-item h2 {
+  margin: 0;
+}
+</style>
+{{ end }}

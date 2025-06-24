@@ -3,15 +3,17 @@ title: Now it talks the talk too
 url: /blog/devlog-02
 layout: single
 tags:
-  - devlog
-  - echo
+  - "#devlog"
+  - "#echo"
 date: 2025-06-18
+summary: >
+  Project devlog: Full game loop now operational, including voice pipeline and avatar movement generation. Still some fine tuning…
 ---
 ## "IT'S ALIVE! IT'S ALIVE!!"
 
 > “Unable to endure the aspect of the being I had created, I rushed out of the room and continued a long time traversing my bed-chamber, unable to compose my mind to sleep.” - _Frankenstein by Mary Shelly_
 
-Alright so it wasn't quite that dramatic but the sentiment still stands. Last night was the `event horizon` except I need eyes where I'm going. Damn that's a good film, you should go watch it if you haven't seen it before. The breach point was confirmed shortly after midnight when the gameplay loop ran fully **WITH** the voice output and the avatar movement. It was surreal to see it finally all click together after debugging trace backs and rewriting the LLM logic.   
+Alright so it wasn't quite that dramatic but the sentiment still stands. Last night was the `event horizon` except I need eyes where I'm going. Damn that's a good film, you should go watch it if you haven't seen it before. The breach point was confirmed shortly after midnight when the gameplay loop ran fully **WITH** the voice output and the avatar movement. It was surreal to see it finally all click together after debugging trace backs and rewriting the LLM logic.  
 
 ## What's New?
 

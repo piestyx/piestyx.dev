@@ -1,0 +1,70 @@
+<main class="github-style">
+  <section class="repo-list">
+    <h1>GitHub Projects</h1>
+    <p>Here are some of the tools, packages, and AI components I've been working on.</p>
+
+    {{ $repos := site.Data.github }}
+
+    {{ range $repos }}
+    <div class="repo-card">
+      <div class="repo-header">
+        <h2><a href="{{ .html_url }}" target="_blank" rel="noopener">{{ .name }}</a></h2>
+        <span class="repo-lang">{{ .language }}</span>
+      </div>
+      <p class="repo-desc">{{ .description }}</p>
+      <div class="repo-meta">
+        <span>⭐ {{ .stargazers_count }}</span>
+        <span>🍴 {{ .forks_count }}</span>
+        <span>🧑‍💻 Updated: {{ .updated_at | time.Format "Jan 2, 2006" }}</span>
+      </div>
+    </div>
+    {{ end }}
+  </section>
+</main>
+
+<style>
+.github-style {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: system-ui, sans-serif;
+}
+.repo-list h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.repo-card {
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.repo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.repo-header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+.repo-header a {
+  text-decoration: none;
+  color: #0366d6;
+}
+.repo-lang {
+  font-size: 0.875rem;
+  color: #586069;
+}
+.repo-desc {
+  margin: 0.5rem 0;
+}
+.repo-meta {
+  font-size: 0.875rem;
+  color: #586069;
+  display: flex;
+  gap: 1rem;
+}
+</style>

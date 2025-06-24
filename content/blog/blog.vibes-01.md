@@ -6,14 +6,16 @@ tags:
   - "#blog"
   - "#vibes"
 date: 2025-05-30
+summary: >
+  Making a confession in my first blog is not a good sign, but give it a chance and then see what you think…
 ---
 ## I'm piestyx, and I'm a vibe-coder
 
-I wasn't too sure how open to be about being a dirty vibe-coder but I think it might have got a bit of a bad rep because of misplaced expectations, let me chuck my story into the ring. 
+I wasn't too sure how open to be about being a dirty vibe-coder but I think it might have got a bit of a bad rep because of misplaced expectations, let me chuck my story into the ring.  
 
-## From Idea to Install 
+## From Idea to Install  
 
-It started in March 2025 with a curiosity about what it would take to make an AI home assistant, one that was offline and self-contained and just ever present on my network. That kind of spiraled into a vision of creating an AI entertainer that can narrate and play games with a high potential for rich and engaging lore, like [`Caves of Qud`](https://www.cavesofqud.com/) and [`Dwarf Fortress`](https://www.bay12games.com/dwarves/). In theory this is all stuff that can be done, they're pieces of a jigsaw puzzle and I figured I could just chop off a few knobbly bits to make them fit. Realistically though I have no real experience to even start to put it together, I could start to scaffold out a website...maybe? But like when maths turns into the alphabet, the point languages start turning into animals it gets a bit weird and you start looking at things like Python with wonder at how this must be what aliens use for their UFOs. If it can fly a UFO it can definitely power my AI entertainer. 
+It started in March 2025 with a curiosity about what it would take to make an AI home assistant, one that was offline and self-contained and just ever present on my network. That kind of spiraled into a vision of creating an AI entertainer that can narrate and play games with a high potential for rich and engaging lore, like [`Caves of Qud`](https://www.cavesofqud.com/) and [`Dwarf Fortress`](https://www.bay12games.com/dwarves/). In theory this is all stuff that can be done, they're pieces of a jigsaw puzzle and I figured I could just chop off a few knobbly bits to make them fit. Realistically though I have no real experience to even start to put it together, I could start to scaffold out a website...maybe? But like when maths turns into the alphabet, the point languages start turning into animals it gets a bit weird and you start looking at things like Python with wonder at how this must be what aliens use for their UFOs. If it can fly a UFO it can definitely power my AI entertainer.  
 
 So I wrote down a note on my phone about what I wanted this thing to do, I stuck it into `ChatGPT` and it swiftly came back to me with a breakdown of the different parts I would need and then even offered to give it all to me. It was the most surprising moment! To be able to just say "this is what I want" and to have it come back straight away and say "here it is, run this script and it will do everything for you". I could barely sleep. I was a kid at Christmas again. I ran myself downstairs in the morning to get my coffee and set myself up, straightened up the desk and double clicked the script ...
 

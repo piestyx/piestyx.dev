@@ -6,6 +6,8 @@ tags:
   - "#devlog"
   - "#echo"
 date: 2025-06-08
+summary: >
+  Project devlog: LLM inferencing on prompt of context from the game logs, the loop is explained…
 ---
 ## "I'll move East to avoid that dangerous baboon"
 
