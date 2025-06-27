@@ -1,0 +1,93 @@
+/* /static/css/playground.css */
+
+/* === Playground UI Styles === */
+.playground-ui {
+  color: var(--text-color);
+  font-family: 'IBM Plex Mono', monospace;
+  max-width: 100%;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 1.5rem;
+}
+
+.playground-ui pre,
+.playground-ui textarea {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-color);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 1em;
+  width: 100%;
+  box-sizing: border-box;
+  white-space: pre-wrap;
+}
+
+.playground-ui input {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-color);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 1em;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: monospace;
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
+.playground-ui textarea {
+  font-family: monospace;
+  font-size: 1em;
+  height: 180px;
+  resize: vertical;
+  margin-bottom: 1em;
+  white-space: normal;
+}
+
+.playground-ui button {
+  display: block;
+  margin: 1em 0;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  background-color: #444;
+  color: #eee;
+  border: 1px solid #666;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.playground-ui button:hover {
+  background-color: #555;
+}
+
+.playground-ui #output {
+  max-height: none;
+  overflow: auto;
+  font-size: 0.85em;
+  line-height: 1.1;
+  white-space: pre-wrap;
+  word-break: break-word;
+  background-color: var(--code-bg);
+  padding: 1em;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.playground-ui #output code {
+  display: block;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.playground-ui .loading {
+  color: var(--secondary);
+  margin: 1em 0;
+}
+
+body.playground-page main.main {
+  max-width: none !important;
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  box-sizing: border-box;
+}
