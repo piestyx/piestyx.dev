@@ -1,0 +1,37 @@
+/* /static/css/blog.css */
+
+.blog-index-layout {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.blog-tags {
+  flex: 1;
+  border-right: 1px solid var(--border);
+  padding-right: 1rem;
+}
+
+.blog-tags ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.blog-tags li {
+  margin: 0.5rem 0;
+}
+
+.blog-posts {
+  flex: 3;
+}
+
+.blog-list-item {
+  margin-bottom: 2rem;
+}
+
+.blog-list-item h2 {
+  margin: 0;
+}

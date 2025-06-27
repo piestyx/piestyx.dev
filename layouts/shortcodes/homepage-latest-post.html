@@ -1,6 +1,0 @@
-{{ range first 1 (where .Site.RegularPages "Section" "blog") }}
-  <article>
-    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-    <p>{{ .Summary }}</p>
-  </article>
-{{ end }}

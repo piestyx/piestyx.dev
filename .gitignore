@@ -7,3 +7,4 @@ hugo_stats.json
 *.swp
 *.swo
 *.log
+.env

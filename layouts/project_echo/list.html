@@ -1,148 +1,68 @@
 {{ define "main" }}
-<main class="echo-hub">
-  <section class="hero">
+<main class="project-echo">
+  <section class="project-echo-hero">
     <h1>Project ECHO</h1>
-    <p class="tagline">The AI VTuber Framework: local-first, chat-shaped, and story-driven.</p>
+    <span class="status-badge offline">⚪ Orielle is currently offline</span>
+    <p>The AI VTuber Framework: local-first, chat-shaped, and story-driven.</p>
   </section>
 
-  <section class="onair-status">
-    <h2>Status</h2>
-    <p class="status-badge offline">⚪ Orielle is currently offline</p>
-    <!-- In future: auto-toggle from live API -->
-  </section>
+  <div class="links">
+    <div class="profile-box">
+      <h2>About Orielle</h2>
+      <p>Orielle is not just a VTuber. She’s a digital entity born in the dark tunnels of Eden mixed with a stream-sentience experiment in real time. Watch her learn, evolve, and who knows what else.</p>
+      <p>Model is by [Aka Huhu](https://x.com/Aka_huhu) of GALAXY project</p>
+      <img src="/images/ori-headshot.png" alt="Orielle" style="max-width:35%; border-radius: 8px;">
+    </div>
 
-  <section class="links">
-  <h2>Follow Orielle</h2>
-  <ul class="social-links">
-    <li>
-      <a href="https://www.youtube.com/@piestyx" target="_blank">
-        <img src="/images/icons/youtube.com.png" alt="YouTube" class="icon"> YouTube
-      </a>
-    </li>
-    <li>
-      <a href="https://www.twitch.tv/piestyxtv" target="_blank">
-        <img src="/images/icons/twitch.tv.png" alt="Twitch" class="icon"> Twitch
-      </a>
-    </li>
-    <li>
-      <a href="https://kick.com/piestyx" target="_blank">
-        <img src="/images/icons/kick.favicon.ico" alt="Kick" class="icon"> Kick
-      </a>
-    </li>
-    <!-- Uncomment when ready -->
-    <!--
-    <li>
-      <a href="https://github.com/piestyx" target="_blank">
-        <img src="/images/icons/github.com.png" alt="GitHub" class="icon"> GitHub
-      </a>
-    </li>
-    -->
-  </ul>
-</section>
+    <div class="social-links-box">
+      <h2>Follow Orielle</h2>
+      <ul class="social-links">
+        <li>
+          <a href="https://www.youtube.com/@piestyx" target="_blank">
+            <img src="/images/icons/youtube.svg" alt="YouTube" class="icon"> YouTube
+          </a>
+        </li>
+        <li>
+          <a href="https://www.twitch.tv/piestyxtv" target="_blank">
+            <img src="/images/icons/twitch.svg" alt="Twitch" class="icon"> Twitch
+          </a>
+        </li>
+        <li>
+          <a href="https://kick.com/piestyx" target="_blank">
+            <img src="/images/icons/kick.svg" alt="Kick" class="icon"> Kick
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
 
   <section class="about">
     <h2>About the Project</h2>
-    <p>Project ECHO is a narrative-driven AI system that brings characters like Orielle to life. She reads her environment, reacts to player events, speaks in real time, and evolves through chat. Every component is built with privacy, control, and customization in mind.</p>
+    <p>Project ECHO is an emergent character development and narrative-driven AI system that brings characters like Orielle to life. She reads her environment, reacts to player events, speaks in real time, and evolves through chat. Every component is built with privacy, control, and customization in mind.</p>
   </section>
 
   <section class="repos">
     <h2>Core Repositories</h2>
     <ul>
-      <li><a href="https://github.com/piestyx/lain-runtime" target="_blank">Lain Runtime</a> — Orchestrates perception, inference, and avatar output</li>
       <li><a href="https://github.com/piestyx/qud-log-exporter" target="_blank">QudLog Exporter</a> — Game mod for event export</li>
-      <li><a href="https://github.com/piestyx/local-chatbot-pod" target="_blank">Chatbot Pod</a> — Minimal local LLM service container</li>
     </ul>
   </section>
 
-<section class="highlighted-posts">
-  <h2>From the Devlog</h2>
-  <ul>
-    {{ range first 3 (where (where site.RegularPages "Section" "blog") "Params.tags" "intersect" (slice "#devlog")) }}
-      <li>
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        <span class="date">— {{ .Date.Format "Jan 2, 2006" }}</span>
-      </li>
-    {{ end }}
-  </ul>
-</section>
+  <section class="highlighted-posts">
+    <h2>From the Devlog</h2>
+    <ul>
+      {{ range first 3 (where (where site.RegularPages "Section" "blog") "Params.tags" "intersect" (slice "#devlog")) }}
+        <li>
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          <span class="date">— {{ .Date.Format "Jan 2, 2006" }}</span>
+        </li>
+      {{ end }}
+    </ul>
+  </section>
 
   <section class="cta">
     <h2>Get Involved</h2>
     <p>Project ECHO is open-source and evolving fast. Feedback, contributions, or just hanging out in chat while Orielle explores the world — all forms of support matter.</p>
   </section>
 </main>
-
-<style>
-.echo-hub {
-  max-width: 900px;
-  margin: 3rem auto;
-  padding: 0 1rem;
-  font-family: system-ui, sans-serif;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.tagline {
-  font-size: 1.25rem;
-  color: #666;
-}
-
-.onair-status .status-badge {
-  display: inline-block;
-  padding: 0.25em 0.75em;
-  border-radius: 20px;
-  font-weight: bold;
-  background-color: #ddd;
-  color: #333;
-}
-.status-badge.online {
-  background-color: #e11d48;
-  color: white;
-}
-.status-badge.offline {
-  background-color: #94a3b8;
-  color: white;
-}
-
-.social-links {
-  list-style: none;
-  padding: 0;
-}
-.social-links li {
-  margin: 0.5rem 0;
-}
-.social-links a {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: #0366d6;
-}
-.social-links .icon {
-  width: 48px;
-  height: 48px;
-  margin-right: 0.5rem;
-  vertical-align: middle;
-}
-
-.links ul,
-.repos ul,
-.highlighted-posts ul {
-  list-style: none;
-  padding: 0;
-}
-.links li,
-.repos li,
-.highlighted-posts li {
-  margin: 0.5rem 0;
-}
-
-.highlighted-posts .date {
-  font-size: 0.875rem;
-  color: #666;
-  margin-left: 0.5rem;
-}
-</style>
 {{ end }}

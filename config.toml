@@ -39,5 +39,10 @@ enableRobotsTXT = true
     url = "/project_echo/"
     weight = 3
 
+  [[menu.main]]
+    name = "Playground"
+    url = "/playground/"
+    weight = 4
+
 [markup.goldmark.renderer]
 unsafe = true
