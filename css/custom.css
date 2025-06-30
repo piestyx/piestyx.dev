@@ -5,5 +5,7 @@
 @import url("/css/project-echo.css");
 
 :root {
+  --nav-width: 1125px;
+  --main-width: 1125px;
   --industrial-glow: #07dbeb;
 }
