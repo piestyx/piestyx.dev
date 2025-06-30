@@ -1,4 +1,20 @@
-<pre class="mermaid">
-  {{ .Inner | htmlEscape | safeHTML }}
-</pre>
-{{ .Page.Store.Set "hasMermaid" true }}
+     {{- $class := .Page.Store.Get "hasMermaid" | default false -}}
+     {{- if not $class -}}
+       {{- $script := resources.Get "js/mermaid.js" -}}
+       {{- if $script -}}
+         {{- $script = $script | resources.ExecuteAsTemplate "js/mermaid.js" . -}}
+         {{- $script = $script | resources.Minify | resources.Fingerprint "sha512" -}}
+         {{- $.Page.Store.Set "hasMermaid" true -}}
+         <script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
+         <script>
+           mermaid.initialize({
+             startOnLoad: true,
+             theme: '{{ if .Get "theme" }}{{ .Get "theme" }}{{ else }}neutral{{ end }}',
+             securityLevel: '{{ if .Get "securityLevel" }}{{ .Get "securityLevel" }}{{ else }}loose{{ end }}'
+           });
+         </script>
+       {{- end -}}
+     {{- end -}}
+     <pre class="mermaid">
+       {{- .Inner -}}
+     </pre>

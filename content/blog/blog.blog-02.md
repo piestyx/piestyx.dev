@@ -1,17 +1,17 @@
 ---
-title: AI, Heidegger, and Ontological Ambiguity
+title: AI, Heidegger, And Ontological Ambiguity
 url: /blog/blog-02
 layout: single
 tags:
-  - "#blog"
-  - "#philosophy"
+- "#blog"
+- "#philosophy"
 date: 2025-06-11
 summary: >
-  A raven is like a writing desk, and a hammer is like a paintbrush. Some thoughts on AI with a Heideggerian lens…
+    A raven is like a writing desk, and a hammer is like a paintbrush. Some thoughts on AI with a Heideggerian lens…
 ---
 ## AI as a Tool
 
-**Bear with me on this one, we're talking Philosophy and that means there is some German in there**  
+**Bear with me on this one, we're talking Philosophy and that means there is some German in there** 
 
 When we think of tools we are generally considering them from a specific pragmatic paradigm; **they are artifacts made for use**. Considering from a Heideggerian perspective we can say they have a role or _Zweck_, and they serve within the _context of readiness-to-hand_ or, **Zuhandensein**. If we consider AI as a tool like a hammer, then we stay within that specific pragmatic paradigm and it takes on those aforementioned states of being.
 
@@ -43,7 +43,7 @@ I know it's a meme to talk about prompt engineering and just setting it to the '
 
 It would work without an engineered prompt as I have described but by using one you are **framing the being** of the LLM within a specific role, context, constraint and goal. It would work but likely exist in a state between **Zuhandensein** and **Vorhandensein** where it is walking that tight rope by having an ambiguous _zweck_. In Heideggerian terms you are shaping the _disclosedness_ (**Erschlossenheit**) of the model’s world. You’re enacting a **clearing** (**Lichtung**) where certain responses are possible, and others are not.
 
-So prompt engineering isn’t just UX; it’s _ontological framing._  
+So prompt engineering isn’t just UX; it’s _ontological framing._ 
 You're not simply asking “What should the AI do?” You're asking, _“What kind of being must the AI adopt to respond this way?”_
 
 You are still allowed to laugh at the memes.
@@ -72,19 +72,22 @@ Our hammers have become mirrors, we've evolved from a functional model to _simul
 
 The bottom line …
 
-    ## Role
-        You are an expert blogger, like top class, grade A, proper good at writing blogs … And you know Heidegger wasn't always telling Jesse that they "have to cook".
-    ## Context
-        We're working on a snappy closer to lighten the tone of a pretty heavy blog
-    ## Instruction
-        1. Propose a light hearted, snappy ending to the blog
-        2. Make it snappy
-    ## Constraints
-        - Max 150 tokens
-        - Snappy
-    ## Let's Begin
-        Well go on then get writing it
+## Role
+You are an expert blogger, like top class, grade A, proper good at writing blogs … And you know Heidegger wasn't always telling Jesse that they "have to cook".
+## Context
+We're working on a snappy closer to lighten the tone of a pretty heavy blog
+## Instruction
+1. Propose a light hearted, snappy ending to the blog
+2. Make it snappy
+## Constraints
+- Max 150 tokens
+- Snappy
+## Let's Begin
+Well go on then get writing it
 
 … make it **Zuhandensein**
 
 piestyx
+
+
+invets 

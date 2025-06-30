@@ -1,12 +1,9 @@
-/* /static/css/base.css */
-
-@import url("/css/base.css");
 @import url("/css/blog.css");
-@import url("/css/components.css");
-@import url("/css/effects.css");
-@import url("/css/git-repo.css");
-@import url("/css/homepage.css");
-@import url("/css/layout.css");
-@import url("/css/nav.css");
+@import url("/css/home.css");
+@import url("/css/packages.css");
 @import url("/css/playground.css");
-@import url("/css/project_echo.css");
+@import url("/css/project-echo.css");
+
+:root {
+  --industrial-glow: #07dbeb;
+}

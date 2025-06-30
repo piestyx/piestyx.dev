@@ -1,3 +1,158 @@
 {{ define "main" }}
-  {{ .Content }}
+<main>
+  
+  <div id="playground">
+    <div class="playground-container">
+      <div class="playground-status">
+        <h3><strong>Status</strong></h3>
+        <p><strong>Server:</strong> <span id="status">Checking...</span></p>
+        <p><strong>Model:</strong> <span id="model">Loading...</span></p>
+        <hr>
+          <h4>Model Switcher</h4>
+          <select id="modelSelector">
+            <option value="deepseek-coder">deepseek-coder</option>
+            <option value="qwen3">qwen3</option>
+            <option value="default">default</option>
+          </select>
+          <button id="switchBtn" disabled>Switch Model</button>
+          <p id="switchStatus"></p>
+      </div>
+
+      <div class="playground-main">
+        <h1>AI Coding Playground</h1>
+        <p>This interface sends requests to a running LLM instance. Try a prompt like:</p>
+        <pre>Write an Arduino program that reads temperature and displays it on an LCD.</pre>
+
+        <label for="promptVersion">Prompt Style:</label>
+        <select id="promptVersion">
+          <option value="deepseek">DeepSeek (Arduino)</option>
+          <option value="deepseek">Qwen3 (Python)</option>
+          <option value="default">Default (No System Prompt)</option>
+        </select>
+
+        <label for="prompt">Your Prompt:</label>
+        <textarea id="prompt"></textarea>
+
+        <button id="sendBtn" onclick="sendPrompt()">Send</button>
+        <div class="loading" id="loading">Thinking...</div>
+
+        <h3>Response:</h3>
+        <pre id="output"></pre>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const BASE_URL = "https://api.piestyx.dev";
+    let currentModel = "";
+    window.addEventListener("DOMContentLoaded", () => {
+    checkStatus();
+    fetchModel();
+    setupSwitcher();
+    });
+
+    function setupSwitcher() {
+      const selector = document.getElementById("modelSelector");
+      const switchBtn = document.getElementById("switchBtn");
+      const statusText = document.getElementById("switchStatus");
+
+      selector.addEventListener("change", () => {
+        const selected = selector.value;
+        switchBtn.disabled = (selected === currentModel);
+      });
+
+      switchBtn.addEventListener("click", async () => {
+        const selected = selector.value;
+        if (selected === currentModel) return;
+
+        statusText.textContent = "Switching...";
+        switchBtn.disabled = true;
+
+        try {
+          const res = await fetch(`${BASE_URL}/switch-model`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ model: selected })
+          });
+
+          if (!res.ok) throw new Error("Switch failed");
+          await fetchModel();  // Refresh model display
+          statusText.textContent = "Model switched!";
+        } catch (err) {
+          statusText.textContent = `Error: ${err.message}`;
+        } finally {
+          setTimeout(() => statusText.textContent = "", 3000);
+        }
+      });
+    }
+
+    async function sendPrompt() {
+      const userPrompt = document.getElementById("prompt").value;
+      const output = document.getElementById("output");
+      const loading = document.getElementById("loading");
+      const variant = document.getElementById("promptVersion").value;
+
+      output.textContent = "";
+      loading.style.display = "block";
+
+      try {
+        const formatRes = await fetch(`${BASE_URL}/format`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ prompt: userPrompt, variant })
+        });
+        const { formatted } = await formatRes.json();
+
+        const response = await fetch(`${BASE_URL}/completion`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            prompt: formatted,
+            temperature: 0.7,
+            max_tokens: 2048
+          })
+        });
+
+        const data = await response.json();
+        output.textContent = data.content || JSON.stringify(data, null, 2);
+      } catch (err) {
+        output.textContent = `Error: ${err.message}`;
+      } finally {
+        loading.style.display = "none";
+      }
+    }
+
+    async function fetchModel() {
+      try {
+        const res = await fetch(`${BASE_URL}/model`, {
+          headers: { "ngrok-skip-browser-warning": "true" }
+        });
+        const data = await res.json();
+        currentModel = data.model || "Unknown";
+        document.getElementById("model").textContent = currentModel;
+
+        const selector = document.getElementById("modelSelector");
+        if (selector) {
+          selector.value = currentModel;
+          document.getElementById("switchBtn").disabled = true;
+        }
+      } catch {
+        currentModel = "Unavailable";
+        document.getElementById("model").textContent = currentModel;
+      }
+    }
+
+    async function checkStatus() {
+      try {
+        const res = await fetch(`${BASE_URL}/health`, {
+          method: "HEAD",
+          headers: { "ngrok-skip-browser-warning": "true" }
+        });
+        document.getElementById("status").textContent = res.ok ? "🟢 Online" : "🔴 Offline";
+      } catch {
+        document.getElementById("status").textContent = "🔴 Offline";
+      }
+    }
+  </script>
+</main>
 {{ end }}

@@ -1,0 +1,74 @@
+{{ define "main" }}
+<main class="project-echo">
+  <section class="project-echo-hero">
+    <h1>Project ECHO</h1>
+    <span class="status-badge offline">⚪ Orielle is currently offline</span>
+    <p>The AI VTuber Framework: local-first, chat-shaped, and story-driven.</p>
+  </section>
+
+<div class="bio-section">
+  <div class="id-card">
+    <h2 class="angled-underline">Orielle</h2>
+    <div class="id-layout">
+      <div class="id-photo">
+        <img src="/images/ori-headshot.png" alt="Orielle">
+      </div>
+      <div class="id-bio">
+        <p class="bio">
+          Orielle is an AI VTuber I have dropped into Caves of Qud and convinced everything is real. She learns (sometimes), adapts and evolves as she explores her new world. She may even reflect you at some point.
+        </p>
+        <p class="credit">
+          Model by <a href="https://x.com/Aka_huhu" target="_blank">Aka Huhu</a> (GALAXY Project)
+        </p>
+
+        <ul class="social-links-inline">
+          <li>
+            <a href="https://www.youtube.com/@piestyx" target="_blank">
+              <img src="/images/icons/youtube.svg" alt="YouTube" class="icon"> 
+            </a>
+          </li>
+          <li>
+            <a href="https://www.twitch.tv/piestyxtv" target="_blank">
+              <img src="/images/icons/twitch.svg" alt="Twitch" class="icon"> 
+            </a>
+          </li>
+          <li>
+            <a href="https://kick.com/piestyx" target="_blank">
+              <img src="/images/icons/kick.svg" alt="Kick" class="icon"> 
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="highlighted-posts">
+    <h2>From the Devlog</h2>
+      {{ range first 3 (where (where site.RegularPages "Section" "blog") "Params.tags" "intersect" (slice "#devlog")) }}
+          <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <p>{{ .Summary }}</p>
+          <p class="date">— {{ .Date.Format "Jan 2, 2006" }}</p>
+      {{ end }}
+  </div>
+</div>
+
+
+  <section class="about">
+    <h2>About the Project</h2>
+    <p>Project ECHO started as an idea for a home-assistant that then turned into an emergent character development and narrative-driven AI system bringing characters 
+      like Orielle to life. So far she is able to read her environment, react to player events and speeak out her reasonsed responses in real time. In the back-end it's 
+      been kept modular with the runtime orchestrating the individual pipelines.</p> 
+    <br><p>She is also able to read and interact with chat from each of the 3 main platforms (Twitch, Youtube and Kick) but is not yet able to respond as this forms part of future development phases.</p>
+  </section>
+
+  <section class="repos">
+    <h2>Core Repositories</h2>
+    <p>I will release what I realistically can without providing the whole of my back-end infrastructure</p>  
+    <br><a href="https://github.com/piestyx/game-mods/tree/main/caves_of_qud/QudLogExporter" target="_blank">QudLog Exporter</a> — Game mod for event export
+  </section>
+
+  <section class="cta">
+    <h2>Get Involved</h2>
+    <p>Project ECHO is open-source and evolving fast. Feedback, contributions, or just hanging out in chat while Orielle explores the world — all forms of support matter.</p>
+  </section>
+</main>
+{{ end }}

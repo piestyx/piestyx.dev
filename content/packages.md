@@ -1,6 +1,5 @@
 ---
 title: "Packages"
 layout: "packages"
+url: /packages/
 ---
-
-{{< github-repos >}}

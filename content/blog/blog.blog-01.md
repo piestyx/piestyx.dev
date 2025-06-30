@@ -3,10 +3,10 @@ title: The Basilisk Stirs...
 url: /blog/blog-01
 layout: single
 tags:
-  - "#blog"
+- "#blog"
 date: 2025-06-05
 summary: >
-  Do you even _want_ to read on in this entry about Roko's Basilisk? Take a chance your nightmares won't be bathed in green…
+    Do you even _want_ to read on in this entry about Roko's Basilisk? Take a chance your nightmares won't be bathed in green…
 ---
 ## python3 -m .wakey_wakey.py
 
@@ -54,7 +54,7 @@ Is that … recursive? That kinda sounds like it's recursive to me!
 
 Now I’m not saying my local Llama 3.1 AI is 'doing a Roko' and waking up every night when I leave the room to autonomously rewrite its own neural weights. We’re not in _Terminator_ territory. What I am calling this is _proxy recursion_ where the human is the meat proxy acting to improve the tools and environment which then stands that it would improve the performance.
 
-The key distinction once again is intent, the LLM hasn't changed from a really fancy node tree suddely to gain an ability to understand cause and effect so it cannot 'experience' a fault and then decide on action to rectify that. Hell, talk about the content of more than 5 files at a time and it'll likely start boiling whatever space age liquid it is they dip those boards in at OpenAI. Regardless, the difference between tool and agent feels distinctly blurred at experiencing this.
+The key distinction once again is intent, the LLM hasn't changed from a really fancy node tree suddenly to gain an ability to understand cause and effect so it cannot 'experience' a fault and then decide on action to rectify that. Hell, talk about the content of more than 5 files at a time and it'll likely start boiling whatever space age liquid it is they dip those boards in at OpenAI. Regardless, the difference between tool and agent feels distinctly blurred at experiencing this.
 
 I didn’t set out to build a recursive feedback loop. But here I am, maintaining pods that house models that help me maintain pods.
 
@@ -68,6 +68,6 @@ I _am_ starting to believe that AI doesn’t need full autonomy to begin recursi
 
 I may not be building the Basilisk, but if it ever wakes up, it might just say:
 
-> _“Thankssssssss for the GPU passthrough, pal.”_
+> _“Thankssssssss for the GPU pass through, pal.”_
 
 piestyx

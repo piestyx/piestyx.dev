@@ -1,5 +1,5 @@
 ---
-title: My AI is a gamer
+title: My AI Is A Gamer
 url: /blog/devlog-01
 layout: single
 tags:

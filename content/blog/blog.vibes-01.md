@@ -1,5 +1,5 @@
 ---
-title: Doing it with vibes
+title: Doing It With Vibes
 url: /blog/vibes-01
 layout: single
 tags:

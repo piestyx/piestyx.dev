@@ -1,5 +1,5 @@
 ---
-title: God's Shadow in Death
+title: God's Shadow In Death
 url: /blog/blog-03
 layout: single
 tags:

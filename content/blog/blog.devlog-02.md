@@ -1,5 +1,5 @@
 ---
-title: Now it talks the talk too
+title: Now It Talks The Talk Too
 url: /blog/devlog-02
 layout: single
 tags:

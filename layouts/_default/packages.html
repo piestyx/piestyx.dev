@@ -1,3 +1,16 @@
 {{ define "main" }}
-  {{ .Content }}
+<main class="package-container">
+  <h1 class="glow-heading">GitHub Projects</h1>
+  <div class="repo-grid">
+    {{ range site.Data.github }}
+      <div class="repo-card">
+        <h2><a href="{{ .html_url }}" target="_blank" rel="noopener">{{ .name }}</a></h2>
+        <p>{{ .description }}</p>
+        {{ with .language }}
+          <span class="lang-pill">{{ . }}</span>
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+</main>
 {{ end }}

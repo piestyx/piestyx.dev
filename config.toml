@@ -1,7 +1,7 @@
 baseURL = "https://piestyx.dev/"
 languageCode = "en-us"
 title = "piestyx.dev"
-theme = ["PaperMod", "github-style"]
+theme = ['PaperMod', 'risotto']
 
 [pagination]
   pagerSize = 10
@@ -19,6 +19,20 @@ enableRobotsTXT = true
   hideFooter = false
   displayFullLangName = false
   disableScrollToTop = false
+
+[params.assets]
+  customCSS = ["css/custom.css"]
+
+[params.socials]
+  email = "piestyx@piestyx.dev"
+  github = "piestyx"
+  youtube = "piestyx"
+  twitter = "piestyx_dev"
+  twitch = "piestyxTV"
+  kick = "piestyx"
+  location = "UK"
+  avatar = "/images/avatar.png"
+  userStatusEmoji = "😀"
 
 [taxonomies]
   tag = "tags"
