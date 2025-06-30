@@ -1,7 +1,7 @@
 baseURL = "https://piestyx.dev/"
 languageCode = "en-us"
 title = "piestyx.dev"
-theme = ['PaperMod', 'risotto']
+theme = ['PaperMod']
 
 [pagination]
   pagerSize = 10
