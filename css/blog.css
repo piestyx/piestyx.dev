@@ -1,8 +1,5 @@
-/* /static/css/blog.css */
-
 .blog-index-layout {
   display: flex;
-  flex-direction: row;
   gap: 2rem;
   max-width: 1000px;
   margin: 2rem auto;
@@ -10,7 +7,7 @@
 }
 
 .blog-tags {
-  flex: 1;
+  flex-basis: 20%;
   border-right: 1px solid var(--border);
   padding-right: 1rem;
 }
@@ -25,7 +22,11 @@
 }
 
 .blog-posts {
-  flex: 3;
+  flex: 1;
+}
+
+.blog-posts h1 {
+  padding-bottom: 0.75em;
 }
 
 .blog-list-item {
