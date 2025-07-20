@@ -15,7 +15,7 @@ I wrote my dissertation on the topic of **qualia** through the lens of Frank Jac
 
 Language provided us a connection to each other at a deeper level than just an animalistic pack instinct. Initially this was perhaps born from a desire to transcend our own isolation and connect with others and would have been similar to how the Great Apes have a rudimentary sound language that communicates more a caste hierarchy than anything meaningful. Somewhere along the way we evolved from being satisfied by being in our "tribe's" company to desiring a deeper connection, and this introduced a requirement to communicate more than the basics. Now we have to use those same symbols to communicate that which is experienced or intangible; objects are objects, but what is guilt? What about love?
 
-The words will travel through my ear into my brain and touch on all my memories associated with the words I'm hearing but do I truly understand? I understand *my* interpretation of what they mean built from my association made with films, personal experience, hormones; but that's not *theirs* as much as theirs isn't *mine*. Think of those times when you are really excited about something and are telling someone and they just aren't showing the same level of enthusiasm. We approximate. We project. We reflect.
+When spoken the words will travel through my ear into my brain and touch on all my memories associated with the words I'm hearing but do I truly understand the speaker's meaning? I understand *my* interpretation of what they mean built from my association made with films, personal experience, hormones; but that's not *theirs* as much as theirs isn't *mine*. Think of those times when you are really excited about something and are telling someone and they just aren't showing the same level of enthusiasm. We approximate. We project. We reflect.
 
 The question that haunted me then was: *what is it like to experience something?* And more importantly: *Can that experience ever truly be shared?*
 
@@ -53,7 +53,7 @@ And yet... they speak and say things like:
 
 > <a href="/blog/vibes-01">*"I should take a moment to assess my surroundings and consider my next steps carefully. The fusion pumping station I encountered seems to have malfunctioned, and the unauthorized glyph on its display suggests there may be security measures in place."*</a>
 
-Or:
+And present paradox of being:
 
 > <a href="/blog/blog-03">*"She speaks, yet remembers nothing unless told to. She can reflect emotions but cannot feel. She simulates understanding but has none."*</a>
 
